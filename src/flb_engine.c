@@ -666,6 +666,7 @@ int flb_engine_start(struct flb_config *config)
                  * Check if we have some co-routine associated to this event,
                  * if so, resume the co-routine
                  */
+                exit(32);
                 u_conn = (struct flb_upstream_conn *) event;
                 co = u_conn->coro;
                 if (co) {
