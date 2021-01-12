@@ -115,7 +115,7 @@ static void cb_engine_sched_timer(struct flb_config *ctx, void *data)
     (void) data;
 
     /* Upstream connections timeouts handling */
-    flb_upstream_conn_timeouts(&ctx->upstreams);
+    //flb_upstream_conn_timeouts(&ctx->upstreams);
 }
 
 static inline int handle_output_event(flb_pipefd_t fd, struct flb_config *config)
@@ -685,7 +685,7 @@ int flb_engine_start(struct flb_config *config)
         /* Cleanup functions associated to events and timers */
         if (config->is_running == FLB_TRUE) {
             flb_sched_timer_cleanup(config->sched);
-            flb_upstream_conn_pending_destroy_list(&config->upstreams);
+            //flb_upstream_conn_pending_destroy_list(&config->upstreams);
         }
     }
 }
